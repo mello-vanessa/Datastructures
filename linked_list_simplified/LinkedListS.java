@@ -50,6 +50,9 @@ public class LinkedListS {
     }
    
     public void printList(){
+        if(head == null){
+            System.out.println("Empty list");
+        }
         Node currentNode = head;
         while(currentNode != null){
             System.out.println(currentNode.data+" ");
