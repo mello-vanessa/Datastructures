@@ -10,9 +10,11 @@ public class Main {
         stack.push(10);
         stack.push(20);
         stack.push(30);
+        //return stack overflow:
         stack.push(40);
         System.out.println("Stack:");
         stack.printStack();
+        //remove value 30
         stack.pop();
         System.out.println("Stack:");        
         stack.printStack();
