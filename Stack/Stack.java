@@ -20,6 +20,7 @@ public class Stack {
         this.maxSize = maxSize;
         /* Será usado como indice no array, ao adicionar o primeiro elemento na 
         pilha, o array ficará elements[0], depois [1]...
+        Por isso uso -1 para iniciar a pilha.
         */
         this.indexTopOfStack = -1;
         this.elements = new int[maxSize];
@@ -35,7 +36,7 @@ public class Stack {
             // out of range -1
             elements[++indexTopOfStack] = value;
         } else {
-            System.out.println(value + "Stack overflow: ");
+            System.out.println("Stack overflow: "+value);
         }        
     }
     
@@ -49,12 +50,25 @@ public class Stack {
         }
     }
     
+    public void reverseStack(){
+        //Verifico se está vazia
+        if(indexTopOfStack == -1){
+            System.out.println("Empty stack.");
+        }
+        else{
+            Stack auxStack = new Stack(this.maxSize);
+            for(int i = indexTopOfStack; i>=0; i--){
+                auxStack.push(elements[i]);
+            }
+            auxStack.printStack();
+        }
+    }
+    
     public void printStack(){
         if(indexTopOfStack == -1 ){
             System.out.println("Empty stack.");
         }
         else{
-            System.out.println("Stack:");
             for(int i=0; i<=indexTopOfStack;i++){
                 System.out.println(elements[i]);
             }
