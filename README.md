@@ -11,3 +11,6 @@ Stack is a linear data structure that follows a particular order in which the op
 <img width="760" alt="image" src="https://github.com/mello-vanessa/Datastructure/assets/35430464/0a724ceb-4258-4b43-a323-9011f667b390">
 
 Source: https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/
+
+## Queue
+Queue is a linear data structure that follows a particular order in which the operations are performed. The order is First In First Out(FIFO) i.e. the data item stored first will be accessed first. In this, entering and retrieving data is not done from only one end. An example of a queue is any queue of consumers for a resource where the consumer that came first is served first.

@@ -74,6 +74,8 @@ public class Stack {
             }
         }
     }
+    
+    //peek, isEmpty, size
 }
 
 
