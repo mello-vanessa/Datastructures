@@ -80,10 +80,24 @@ public class Stack {
         else return false;
     }
     
-    public int stackSize(){
+    public int size(){
         return this.indexTopOfStack+1;
     }
-    //peek
+    
+    /*
+    Peek: The top element can be inspected without removing it from the stack 
+    using a peek operation.
+    */
+    public int peek(){
+        if(this.isEmpty()){
+            System.out.println("Empty stack.");
+            return -1;
+        }
+        else{
+            return elements[indexTopOfStack];
+        }
+    }
+    
 }
 
 

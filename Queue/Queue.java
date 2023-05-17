@@ -26,26 +26,47 @@ public class Queue {
     }
     
     public void dequeue(){
-        if(indexEndOfQueue>0){
+        if(this.isEmpty()){
+            System.out.println("Empty queue.");
+        }
+        else{
             for(int i=0;i<indexEndOfQueue-1;i++){
                 //i+1: aumenta mas não altera o valor de i
                 elements[i] = elements[i+1];
             }
             indexEndOfQueue--;
         }
-        else{
-            System.out.println("Empty queue.");
-        }
     }
     
     public void printQueue(){
-        if(indexEndOfQueue>=0){
-            for(int i=0;i<indexEndOfQueue;i++){
-                System.out.println(elements[i]);
-            }    
+        if(this.isEmpty()){
+            System.out.println("Empty queue.");   
         }
         else {
+            for(int i=0;i<indexEndOfQueue;i++){
+                System.out.println(elements[i]);
+            } 
+        }
+    }
+    
+    public boolean isEmpty(){
+        if(indexEndOfQueue<0){
+            return true;
+        }
+        else return false;
+    }
+    
+    public int size(){
+        return indexEndOfQueue+1;
+    }
+    
+    public int peek(){
+        if(this.isEmpty()){
             System.out.println("Empty queue.");
+            return -1;
+        }
+        else{
+            return elements[0];
         }
     }
 }

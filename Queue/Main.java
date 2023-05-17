@@ -19,5 +19,10 @@ public class Main {
         queue.dequeue();
         System.out.println("Print queue:");
         queue.printQueue();
+        System.out.println("Remove all values:");
+        while(queue.size()>0){
+            queue.dequeue();
+        }
+        System.out.println(queue.size());
     }
 }
