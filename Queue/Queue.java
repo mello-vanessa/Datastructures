@@ -28,7 +28,7 @@ public class Queue {
     public void dequeue(){
         if(indexEndOfQueue>0){
             for(int i=0;i<indexEndOfQueue-1;i++){
-                //i+1 aumenta mas não altera o valor de i
+                //i+1: aumenta mas não altera o valor de i
                 elements[i] = elements[i+1];
             }
             indexEndOfQueue--;

@@ -15,6 +15,7 @@ public class Main {
         System.out.println("Print queue:");
         queue.printQueue();
         //remove value 10
+        System.out.println("Remove first value.");
         queue.dequeue();
         System.out.println("Print queue:");
         queue.printQueue();

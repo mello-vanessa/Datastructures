@@ -15,6 +15,7 @@ public class Main {
         System.out.println("Stack:");
         stack.printStack();
         //remove value 30
+        System.out.println("Remove last value.");
         stack.pop();
         System.out.println("Stack:");        
         stack.printStack();
