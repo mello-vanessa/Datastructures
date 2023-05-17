@@ -41,18 +41,16 @@ public class Stack {
     }
     
     public void pop(){
-        if(indexTopOfStack >=0 ){
+        if(this.isEmpty()) System.out.println("Empty stack.");
+        else{
             System.out.println(elements[indexTopOfStack]+" removed from stack.");
             indexTopOfStack--;
-        }
-        else{
-            System.out.println("Empty stack.");
         }
     }
     
     public void reverseStack(){
         //Verifico se está vazia
-        if(indexTopOfStack == -1){
+        if(this.isEmpty()){
             System.out.println("Empty stack.");
         }
         else{
@@ -65,7 +63,7 @@ public class Stack {
     }
     
     public void printStack(){
-        if(indexTopOfStack == -1 ){
+        if(this.isEmpty()){
             System.out.println("Empty stack.");
         }
         else{
@@ -75,7 +73,17 @@ public class Stack {
         }
     }
     
-    //peek, isEmpty, size
+    public boolean isEmpty(){
+        if(indexTopOfStack == -1 ){
+            return true;
+        }
+        else return false;
+    }
+    
+    public int stackSize(){
+        return this.indexTopOfStack+1;
+    }
+    //peek
 }
 
 

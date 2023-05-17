@@ -14,11 +14,13 @@ public class Main {
         stack.push(40);
         System.out.println("Stack:");
         stack.printStack();
+        System.out.println("Size: "+stack.stackSize());
         //remove value 30
         System.out.println("Remove last value.");
         stack.pop();
         System.out.println("Stack:");        
         stack.printStack();
+        System.out.println("Size: "+stack.stackSize());
         System.out.println("Reverse stack:");
         stack.reverseStack();
     }
