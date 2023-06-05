@@ -1,4 +1,4 @@
-package Tree_BinaryTree;
+package BTS;
 
 /**
  *
@@ -12,7 +12,6 @@ public class Node {
     
     public Node(int data){
         this.data = data;
-        this.right = null;
-        this.left = null;
+        this.right = this.left = null;
     }
 }
